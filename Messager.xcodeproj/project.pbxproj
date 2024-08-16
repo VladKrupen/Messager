@@ -9,19 +9,42 @@
 /* Begin PBXBuildFile section */
 		01B7EA972C6F3D42006E048F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EA962C6F3D42006E048F /* AppDelegate.swift */; };
 		01B7EA992C6F3D42006E048F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EA982C6F3D42006E048F /* SceneDelegate.swift */; };
-		01B7EA9B2C6F3D42006E048F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EA9A2C6F3D42006E048F /* ViewController.swift */; };
 		01B7EAA02C6F3D44006E048F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7EA9F2C6F3D44006E048F /* Assets.xcassets */; };
 		01B7EAA32C6F3D44006E048F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 01B7EAA22C6F3D44006E048F /* Base */; };
+		01B7EAB32C6F459F006E048F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAB22C6F459F006E048F /* AppCoordinator.swift */; };
+		01B7EAB52C6F4617006E048F /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAB42C6F4617006E048F /* CoordinatorProtocol.swift */; };
+		01B7EABC2C6F4914006E048F /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EABB2C6F4914006E048F /* CoordinatorFactory.swift */; };
+		01B7EABE2C6F4A2A006E048F /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EABD2C6F4A2A006E048F /* SplashCoordinator.swift */; };
+		01B7EAC42C6F4C74006E048F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAC32C6F4C74006E048F /* SplashViewController.swift */; };
+		01B7EAC62C6F4CC7006E048F /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAC52C6F4CC7006E048F /* SplashPresenter.swift */; };
+		01B7EACB2C6F4DD8006E048F /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EACA2C6F4DD8006E048F /* ModuleFactory.swift */; };
+		01B7EACD2C6F52AA006E048F /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EACC2C6F52AA006E048F /* AppCoordinatorProtocol.swift */; };
+		01B7EAD22C6F5428006E048F /* SplashViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAD12C6F5428006E048F /* SplashViewProtocol.swift */; };
+		01B7EAD42C6F544B006E048F /* SplashPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAD32C6F544B006E048F /* SplashPresenterProtocol.swift */; };
+		01B7EADA2C6F5F09006E048F /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 01B7EAD92C6F5F09006E048F /* Splash.json */; };
+		01B7EADD2C6F6059006E048F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 01B7EADC2C6F6059006E048F /* Lottie */; };
+		01B7EADF2C6F6642006E048F /* FlowModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EADE2C6F6642006E048F /* FlowModuleProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01B7EA932C6F3D42006E048F /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7EA962C6F3D42006E048F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7EA982C6F3D42006E048F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01B7EA9A2C6F3D42006E048F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01B7EA9F2C6F3D44006E048F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01B7EAA22C6F3D44006E048F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B7EAA42C6F3D44006E048F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B7EAB22C6F459F006E048F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		01B7EAB42C6F4617006E048F /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		01B7EABB2C6F4914006E048F /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		01B7EABD2C6F4A2A006E048F /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		01B7EAC32C6F4C74006E048F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		01B7EAC52C6F4CC7006E048F /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		01B7EACA2C6F4DD8006E048F /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		01B7EACC2C6F52AA006E048F /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		01B7EAD12C6F5428006E048F /* SplashViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewProtocol.swift; sourceTree = "<group>"; };
+		01B7EAD32C6F544B006E048F /* SplashPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterProtocol.swift; sourceTree = "<group>"; };
+		01B7EAD92C6F5F09006E048F /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
+		01B7EADE2C6F6642006E048F /* FlowModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowModuleProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B7EADD2C6F6059006E048F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +80,11 @@
 			children = (
 				01B7EAAA2C6F3D78006E048F /* Application */,
 				01B7EAAB2C6F3D82006E048F /* Resource */,
-				01B7EA9A2C6F3D42006E048F /* ViewController.swift */,
+				01B7EAB02C6F4552006E048F /* Models */,
+				01B7EAAF2C6F4546006E048F /* Factories */,
+				01B7EAAC2C6F452C006E048F /* Base */,
+				01B7EAAD2C6F4532006E048F /* Coordinators */,
+				01B7EAB12C6F455C006E048F /* Modules */,
 			);
 			path = Messager;
 			sourceTree = "<group>";
@@ -76,8 +104,103 @@
 				01B7EA9F2C6F3D44006E048F /* Assets.xcassets */,
 				01B7EAA12C6F3D44006E048F /* LaunchScreen.storyboard */,
 				01B7EAA42C6F3D44006E048F /* Info.plist */,
+				01B7EAD92C6F5F09006E048F /* Splash.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		01B7EAAC2C6F452C006E048F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EACC2C6F52AA006E048F /* AppCoordinatorProtocol.swift */,
+				01B7EAB42C6F4617006E048F /* CoordinatorProtocol.swift */,
+				01B7EADE2C6F6642006E048F /* FlowModuleProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		01B7EAAD2C6F4532006E048F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAB22C6F459F006E048F /* AppCoordinator.swift */,
+				01B7EABD2C6F4A2A006E048F /* SplashCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		01B7EAAF2C6F4546006E048F /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EABA2C6F4902006E048F /* Coordinator */,
+				01B7EAC92C6F4DBE006E048F /* Module */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		01B7EAB02C6F4552006E048F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01B7EAB12C6F455C006E048F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EABF2C6F4B29006E048F /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		01B7EABA2C6F4902006E048F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EABB2C6F4914006E048F /* CoordinatorFactory.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		01B7EABF2C6F4B29006E048F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EACE2C6F53EF006E048F /* Protocols */,
+				01B7EAC12C6F4C51006E048F /* View */,
+				01B7EAC22C6F4C5A006E048F /* Presenter */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		01B7EAC12C6F4C51006E048F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAC32C6F4C74006E048F /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01B7EAC22C6F4C5A006E048F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAC52C6F4CC7006E048F /* SplashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		01B7EAC92C6F4DBE006E048F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EACA2C6F4DD8006E048F /* ModuleFactory.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		01B7EACE2C6F53EF006E048F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAD12C6F5428006E048F /* SplashViewProtocol.swift */,
+				01B7EAD32C6F544B006E048F /* SplashPresenterProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +219,9 @@
 			dependencies = (
 			);
 			name = Messager;
+			packageProductDependencies = (
+				01B7EADC2C6F6059006E048F /* Lottie */,
+			);
 			productName = Messager;
 			productReference = 01B7EA932C6F3D42006E048F /* Messager.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +250,9 @@
 				Base,
 			);
 			mainGroup = 01B7EA8A2C6F3D42006E048F;
+			packageReferences = (
+				01B7EADB2C6F6059006E048F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 01B7EA942C6F3D42006E048F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +269,7 @@
 			files = (
 				01B7EAA02C6F3D44006E048F /* Assets.xcassets in Resources */,
 				01B7EAA32C6F3D44006E048F /* Base in Resources */,
+				01B7EADA2C6F5F09006E048F /* Splash.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +280,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B7EA9B2C6F3D42006E048F /* ViewController.swift in Sources */,
+				01B7EACD2C6F52AA006E048F /* AppCoordinatorProtocol.swift in Sources */,
+				01B7EADF2C6F6642006E048F /* FlowModuleProtocol.swift in Sources */,
+				01B7EAD42C6F544B006E048F /* SplashPresenterProtocol.swift in Sources */,
+				01B7EAC62C6F4CC7006E048F /* SplashPresenter.swift in Sources */,
+				01B7EABE2C6F4A2A006E048F /* SplashCoordinator.swift in Sources */,
+				01B7EAD22C6F5428006E048F /* SplashViewProtocol.swift in Sources */,
+				01B7EACB2C6F4DD8006E048F /* ModuleFactory.swift in Sources */,
+				01B7EAB32C6F459F006E048F /* AppCoordinator.swift in Sources */,
+				01B7EAC42C6F4C74006E048F /* SplashViewController.swift in Sources */,
+				01B7EABC2C6F4914006E048F /* CoordinatorFactory.swift in Sources */,
+				01B7EAB52C6F4617006E048F /* CoordinatorProtocol.swift in Sources */,
 				01B7EA972C6F3D42006E048F /* AppDelegate.swift in Sources */,
 				01B7EA992C6F3D42006E048F /* SceneDelegate.swift in Sources */,
 			);
@@ -365,6 +505,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01B7EADB2C6F6059006E048F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01B7EADC2C6F6059006E048F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01B7EADB2C6F6059006E048F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01B7EA8B2C6F3D42006E048F /* Project object */;
 }

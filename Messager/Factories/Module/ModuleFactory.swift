@@ -1,0 +1,18 @@
+//
+//  ModuleFactory.swift
+//  Messager
+//
+//  Created by Vlad on 16.08.24.
+//
+
+import UIKit
+
+final class ModuleFactory {
+    
+    func createSplashModule() -> SplashViewController {
+        let view = SplashViewController()
+        let presenter = SplashPresenter(view: view)
+        view.presenter = presenter
+        return view
+    }
+}
