@@ -9,13 +9,18 @@ import UIKit
 
 final class CoordinatorFactory {
     
-    func createAppCoordinator(navigationController: UINavigationController) -> AppCoordinator {
+    func createAppCoordinator(navigationController: UINavigationController) -> AppCoordinatorProtocol {
         let appCoordinator = AppCoordinator(navigationController: navigationController)
         return appCoordinator
     }
     
-    func createSplashCoordinator(navigationController: UINavigationController) -> SplashCoordinator {
+    func createSplashCoordinator(navigationController: UINavigationController) -> CoordinatorProtocol {
         let splashCoordinator = SplashCoordinator(navigationController: navigationController)
         return splashCoordinator
+    }
+    
+    func createAuthCoordinator(navigationController: UINavigationController) -> CoordinatorProtocol {
+        let authCoordinator = AuthCoordinator(navigationController: navigationController)
+        return authCoordinator
     }
 }

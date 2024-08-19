@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 final class SplashViewController: UIViewController, SplashViewProtocol {
-        
+    
     var presenter: SplashPresenterProtocol!
     
     private var lottieAnimation = LottieAnimationView(name: "Splash")
@@ -17,6 +17,7 @@ final class SplashViewController: UIViewController, SplashViewProtocol {
     override func loadView() {
         super.loadView()
         view = lottieAnimation
+        view.backgroundColor = UIColor(hex: AppColor.backgroundColor)
     }
     
     override func viewDidLoad() {

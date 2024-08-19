@@ -24,6 +24,14 @@
 		01B7EADA2C6F5F09006E048F /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 01B7EAD92C6F5F09006E048F /* Splash.json */; };
 		01B7EADD2C6F6059006E048F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 01B7EADC2C6F6059006E048F /* Lottie */; };
 		01B7EADF2C6F6642006E048F /* FlowModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EADE2C6F6642006E048F /* FlowModuleProtocol.swift */; };
+		01B7EAE12C6F6D43006E048F /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAE02C6F6D43006E048F /* AuthCoordinator.swift */; };
+		01B7EAE92C71F992006E048F /* AuthPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAE82C71F992006E048F /* AuthPresenterProtocol.swift */; };
+		01B7EAEB2C71F99D006E048F /* AuthViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAEA2C71F99D006E048F /* AuthViewProtocol.swift */; };
+		01B7EAF12C71FA37006E048F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAF02C71FA37006E048F /* AuthViewController.swift */; };
+		01B7EAF32C71FA83006E048F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAF22C71FA83006E048F /* AuthPresenter.swift */; };
+		01B7EAF62C738137006E048F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAF52C738137006E048F /* UIColor+Extension.swift */; };
+		01B7EAF82C738512006E048F /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAF72C738512006E048F /* AppColor.swift */; };
+		01B7EAFD2C738CE7006E048F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EAFC2C738CE7006E048F /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +53,14 @@
 		01B7EAD32C6F544B006E048F /* SplashPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterProtocol.swift; sourceTree = "<group>"; };
 		01B7EAD92C6F5F09006E048F /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		01B7EADE2C6F6642006E048F /* FlowModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowModuleProtocol.swift; sourceTree = "<group>"; };
+		01B7EAE02C6F6D43006E048F /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		01B7EAE82C71F992006E048F /* AuthPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenterProtocol.swift; sourceTree = "<group>"; };
+		01B7EAEA2C71F99D006E048F /* AuthViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewProtocol.swift; sourceTree = "<group>"; };
+		01B7EAF02C71FA37006E048F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		01B7EAF22C71FA83006E048F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		01B7EAF52C738137006E048F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		01B7EAF72C738512006E048F /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		01B7EAFC2C738CE7006E048F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +96,10 @@
 			children = (
 				01B7EAAA2C6F3D78006E048F /* Application */,
 				01B7EAAB2C6F3D82006E048F /* Resource */,
+				01B7EAF42C738112006E048F /* Extension */,
 				01B7EAB02C6F4552006E048F /* Models */,
-				01B7EAAF2C6F4546006E048F /* Factories */,
 				01B7EAAC2C6F452C006E048F /* Base */,
+				01B7EAAF2C6F4546006E048F /* Factories */,
 				01B7EAAD2C6F4532006E048F /* Coordinators */,
 				01B7EAB12C6F455C006E048F /* Modules */,
 			);
@@ -124,6 +141,7 @@
 			children = (
 				01B7EAB22C6F459F006E048F /* AppCoordinator.swift */,
 				01B7EABD2C6F4A2A006E048F /* SplashCoordinator.swift */,
+				01B7EAE02C6F6D43006E048F /* AuthCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -140,6 +158,7 @@
 		01B7EAB02C6F4552006E048F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01B7EAF72C738512006E048F /* AppColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				01B7EABF2C6F4B29006E048F /* Splash */,
+				01B7EAE32C71F867006E048F /* Auth */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -201,6 +221,50 @@
 				01B7EAD32C6F544B006E048F /* SplashPresenterProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		01B7EAE32C71F867006E048F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAE72C71F917006E048F /* Protocol */,
+				01B7EAE52C71F907006E048F /* View */,
+				01B7EAE42C71F901006E048F /* Presenter */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		01B7EAE42C71F901006E048F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAF22C71FA83006E048F /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		01B7EAE52C71F907006E048F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAF02C71FA37006E048F /* AuthViewController.swift */,
+				01B7EAFC2C738CE7006E048F /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01B7EAE72C71F917006E048F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAEA2C71F99D006E048F /* AuthViewProtocol.swift */,
+				01B7EAE82C71F992006E048F /* AuthPresenterProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		01B7EAF42C738112006E048F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				01B7EAF52C738137006E048F /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +344,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B7EAF62C738137006E048F /* UIColor+Extension.swift in Sources */,
+				01B7EAF32C71FA83006E048F /* AuthPresenter.swift in Sources */,
+				01B7EAEB2C71F99D006E048F /* AuthViewProtocol.swift in Sources */,
 				01B7EACD2C6F52AA006E048F /* AppCoordinatorProtocol.swift in Sources */,
 				01B7EADF2C6F6642006E048F /* FlowModuleProtocol.swift in Sources */,
+				01B7EAE92C71F992006E048F /* AuthPresenterProtocol.swift in Sources */,
+				01B7EAFD2C738CE7006E048F /* AuthView.swift in Sources */,
 				01B7EAD42C6F544B006E048F /* SplashPresenterProtocol.swift in Sources */,
 				01B7EAC62C6F4CC7006E048F /* SplashPresenter.swift in Sources */,
+				01B7EAF82C738512006E048F /* AppColor.swift in Sources */,
+				01B7EAE12C6F6D43006E048F /* AuthCoordinator.swift in Sources */,
 				01B7EABE2C6F4A2A006E048F /* SplashCoordinator.swift in Sources */,
 				01B7EAD22C6F5428006E048F /* SplashViewProtocol.swift in Sources */,
 				01B7EACB2C6F4DD8006E048F /* ModuleFactory.swift in Sources */,
@@ -292,6 +363,7 @@
 				01B7EABC2C6F4914006E048F /* CoordinatorFactory.swift in Sources */,
 				01B7EAB52C6F4617006E048F /* CoordinatorProtocol.swift in Sources */,
 				01B7EA972C6F3D42006E048F /* AppDelegate.swift in Sources */,
+				01B7EAF12C71FA37006E048F /* AuthViewController.swift in Sources */,
 				01B7EA992C6F3D42006E048F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

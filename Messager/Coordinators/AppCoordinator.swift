@@ -26,5 +26,21 @@ final class AppCoordinator: AppCoordinatorProtocol {
         let splashCoordinator = coordinatorFactory.createSplashCoordinator(navigationController: navigationController)
         childCoordinator.append(splashCoordinator)
         splashCoordinator.start()
+        splashCoordinator.flowCompletionHandler = { [weak self] in
+            self?.showAuth()
+        }
+    }
+    
+    private func showAuth() {
+        let authCoordinator = coordinatorFactory.createAuthCoordinator(navigationController: navigationController)
+        childCoordinator.append(authCoordinator)
+        authCoordinator.start()
+        authCoordinator.flowCompletionHandler = { [weak self] in
+            
+        }
+    }
+    
+    deinit {
+        print("deinit app coordinator")
     }
 }

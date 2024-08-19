@@ -15,4 +15,11 @@ final class ModuleFactory {
         view.presenter = presenter
         return view
     }
+    
+    func createAuthModule() -> AuthViewController {
+        let view = AuthViewController()
+        let presenter = AuthPresenter(view: view)
+        view.presenter = presenter
+        return view
+    }
 }
