@@ -8,5 +8,6 @@
 import Foundation
 
 protocol AuthPresenterProtocol: AnyObject {
-    
+    var completionHandler: ((AuthButton) -> Void)? { get set }
+    func navigateToNextScreen(button: AuthButton)
 }

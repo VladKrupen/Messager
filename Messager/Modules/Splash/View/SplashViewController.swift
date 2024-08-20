@@ -30,4 +30,8 @@ final class SplashViewController: UIViewController, SplashViewProtocol {
             self?.presenter.animationDidFinish(completed: completed)
         }
     }
+    
+    deinit {
+        print("deinit SplashVC")
+    }
 }

@@ -7,46 +7,21 @@
 
 import UIKit
 
-class AuthView: UIView {
+final class AuthView: UIView {
     
     var loginButtonAction: (() -> Void)?
     var registrationButtonAction: (() -> Void)?
     
+    private let viewBuilder = ViewBuilder()
+    
     //MARK: UI
-    private let backgroundImageView: UIImageView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "auth")
-        $0.contentMode = .scaleAspectFill
-        return $0
-    }(UIImageView())
+    private lazy var backgroundImageView = viewBuilder.getBackgroundImageView(image: AppImage.imageBackgroundAuthScreen, view: self)
     
-    private let titleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.textAlignment = .center
-        $0.numberOfLines = 0
-        $0.text = "Messager"
-        $0.font = UIFont.systemFont(ofSize: 30, weight: .bold)
-        $0.textColor = .white
-        return $0
-    }(UILabel())
+    private lazy var titleLabel = viewBuilder.getTitleLabel(title: "Messager", view: self, scrollView: nil)
     
-    private lazy var loginButton: UIButton = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Войти", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        $0.setTitleColor(.white, for: .normal)
-        $0.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
-        return $0
-    }(UIButton(type: .system))
-    
-    private lazy var registrationButton: UIButton = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Регистрация", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 24)
-        $0.setTitleColor(UIColor(hex: AppColor.registartionButtonColor), for: .normal)
-        $0.addTarget(self, action: #selector(registrationButtonTapped), for: .touchUpInside)
-        return $0
-    }(UIButton(type: .system))
+    private lazy var loginButton = viewBuilder.getAuthButton(title: "Войти", size: 24, color: .white, target: self, action: #selector(loginButtonTapped))
+        
+    private lazy var registrationButton = viewBuilder.getAuthButton(title: "Регистрация", size: 24, color: UIColor(hex: AppColor.registartionButtonColor), target: self, action: #selector(registrationButtonTapped))
     
     private let stackOfButtons: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -59,6 +34,7 @@ class AuthView: UIView {
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
         layoutElements()
     }
     
@@ -68,29 +44,9 @@ class AuthView: UIView {
     
     //MARK: Layout
     private func layoutElements() {
-        layoutBackgroundImageView()
-        layoutTitleLabel()
+        sendSubviewToBack(backgroundImageView)
+        bringSubviewToFront(titleLabel)
         layoutStackOfButtons()
-    }
-    
-    private func layoutBackgroundImageView() {
-        addSubview(backgroundImageView)
-        
-        NSLayoutConstraint.activate([
-            backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
-            backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-    }
-    
-    private func layoutTitleLabel() {
-        addSubview(titleLabel)
-        
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-        ])
     }
     
     private func layoutStackOfButtons() {
@@ -102,6 +58,10 @@ class AuthView: UIView {
             stackOfButtons.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -70),
             stackOfButtons.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
+    }
+    
+    deinit {
+        print("deinit AuthView")
     }
 }
 

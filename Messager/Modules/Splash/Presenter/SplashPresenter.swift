@@ -8,7 +8,7 @@
 import Foundation
 
 final class SplashPresenter: SplashPresenterProtocol {
-    var completionHendler: ((Bool) -> Void)?
+    var completionHandler: ((Bool) -> Void)?
     
     weak var view: SplashViewProtocol?
     
@@ -21,6 +21,10 @@ final class SplashPresenter: SplashPresenterProtocol {
     }
     
     func animationDidFinish(completed: Bool) {
-        completionHendler?(completed)
+        completionHandler?(completed)
+    }
+    
+    deinit {
+        print("deinit SplashPresenter")
     }
 }

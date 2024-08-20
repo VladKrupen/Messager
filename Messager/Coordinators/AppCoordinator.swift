@@ -39,8 +39,4 @@ final class AppCoordinator: AppCoordinatorProtocol {
             
         }
     }
-    
-    deinit {
-        print("deinit app coordinator")
-    }
 }

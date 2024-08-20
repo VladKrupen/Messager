@@ -24,5 +24,23 @@ final class AuthCoordinator: CoordinatorProtocol {
     private func showAuthModule() {
         let controller = ModuleFactory().createAuthModule()
         navigationController.setViewControllers([controller], animated: false)
+        controller.presenter.completionHandler = { [weak self] button in
+            switch button {
+            case .loginButton:
+                self?.showLoginModule()
+            case .registrationButton:
+                self?.showRegistrationModule()
+            }
+        }
+    }
+    
+    private func showLoginModule() {
+        let controller = ModuleFactory().createLoginModule()
+        navigationController.pushViewController(controller, animated: true)
+        //completionHandler
+    }
+    
+    private func showRegistrationModule() {
+        
     }
 }

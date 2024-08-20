@@ -10,4 +10,5 @@ import Foundation
 struct AppColor {
     static let backgroundColor: String = "#161616"
     static let registartionButtonColor: String = "#807F80"
+    static let textFieldColor: String = "#B4B4B4"
 }

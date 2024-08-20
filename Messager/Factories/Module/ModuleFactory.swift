@@ -22,4 +22,13 @@ final class ModuleFactory {
         view.presenter = presenter
         return view
     }
+    
+    func createLoginModule() -> LoginViewController {
+        let view = LoginViewController()
+        let model = LoginModel()
+        let presenter = LoginPresenter(view: view, model: model)
+        view.presenter = presenter
+        model.presenter = presenter
+        return view
+    }
 }

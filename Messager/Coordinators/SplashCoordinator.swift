@@ -24,11 +24,8 @@ final class SplashCoordinator: CoordinatorProtocol {
     private func showSplashModule() {
         let controller = moduleFactory.createSplashModule()
         navigationController.pushViewController(controller, animated: true)
-        controller.presenter.completionHendler = { [weak self] value in
+        controller.presenter.completionHandler = { [weak self] value in
             self?.flowCompletionHandler?()
         }
-    }
-    deinit {
-        print("deinit")
     }
 }

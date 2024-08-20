@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SplashPresenterProtocol: AnyObject {
-    var completionHendler: ((Bool) -> Void)? { get set }
+    var completionHandler: ((Bool) -> Void)? { get set }
     
     func startAnimation()
     func animationDidFinish(completed: Bool)

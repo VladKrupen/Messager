@@ -25,14 +25,17 @@ final class AuthViewController: UIViewController, AuthViewProtocol {
     
     private func loginButtonTapped() {
         authView.loginButtonAction = { [weak self] in
-            print(1)
+            self?.presenter.navigateToNextScreen(button: .loginButton)
         }
     }
     
     private func registartionButtonTapped() {
         authView.registrationButtonAction = { [weak self] in
-            print(2)
+            self?.presenter.navigateToNextScreen(button: .registrationButton)
         }
     }
     
+    deinit {
+        print("deinit AuthVC")
+    }
 }
