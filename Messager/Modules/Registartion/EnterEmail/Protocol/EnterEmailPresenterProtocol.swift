@@ -8,5 +8,6 @@
 import Foundation
 
 protocol EnterEmailPresenterProtocol: AnyObject {
-    
+    var completionHandler: (() -> Void)? { get set }
+    func navigateToNextScreen()
 }

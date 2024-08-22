@@ -20,7 +20,7 @@ final class LoginView: UIView {
     
     private lazy var emailField = viewBuilder.getTextField(placeholder: "Email", delegate: self)
     
-    private lazy var passwordField = viewBuilder.getTextField(placeholder: "Password", delegate: self, isSecureTextEntry: true, target: self, action: #selector(viewPasswordFieldLongPress))
+    private lazy var passwordField = viewBuilder.getTextField(placeholder: "Пароль", delegate: self, isSecureTextEntry: true, target: self, action: #selector(viewPasswordFieldLongPress))
     
     private lazy var loginButton = viewBuilder.getAuthButton(title: "Войти", size: 24, color: .white, target: self, action: #selector(loginButtonTapped))
     
@@ -37,6 +37,7 @@ final class LoginView: UIView {
         backgroundColor = .white
         layoutElements()
         setupHidingKeyboard()
+        emailField.autocapitalizationType = .none
     }
     
     required init?(coder: NSCoder) {

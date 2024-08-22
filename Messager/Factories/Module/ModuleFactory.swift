@@ -40,4 +40,13 @@ final class ModuleFactory {
         model.presenter = presenter
         return view
     }
+    
+    func createEnterPasswordModule() -> EnterPasswordViewController {
+        let view = EnterPasswordViewController()
+        let model = EnterPasswordModel()
+        let presenter = EnterPasswordPresenter(view: view, model: model)
+        view.presener = presenter
+        model.presenter = presenter
+        return view
+    }
 }

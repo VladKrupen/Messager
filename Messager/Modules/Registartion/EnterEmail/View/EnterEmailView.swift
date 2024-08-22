@@ -96,4 +96,8 @@ extension EnterEmailView: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.autocapitalizationType = .none
+    }
 }

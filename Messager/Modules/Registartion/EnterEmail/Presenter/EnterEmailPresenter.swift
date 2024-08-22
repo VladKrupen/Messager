@@ -8,6 +8,7 @@
 import Foundation
 
 final class EnterEmailPresenter: EnterEmailPresenterProtocol {
+    var completionHandler: (() -> Void)?
     
     weak var view: EnterEmailViewProtocol?
     let model: EnterEmailModelProtocol
@@ -15,6 +16,10 @@ final class EnterEmailPresenter: EnterEmailPresenterProtocol {
     init(view: EnterEmailViewProtocol? = nil, model: EnterEmailModelProtocol) {
         self.view = view
         self.model = model
+    }
+    
+    func navigateToNextScreen() {
+        completionHandler?()
     }
     
     deinit {

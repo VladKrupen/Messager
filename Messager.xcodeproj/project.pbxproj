@@ -14,6 +14,13 @@
 		01AEEC1C2C77406A00754E5E /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC1B2C77406A00754E5E /* EnterEmailViewController.swift */; };
 		01AEEC1E2C7740AF00754E5E /* EnterEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC1D2C7740AF00754E5E /* EnterEmailPresenter.swift */; };
 		01AEEC202C77413400754E5E /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC1F2C77413400754E5E /* EnterEmailView.swift */; };
+		01AEEC272C774A8B00754E5E /* EnterPasswordPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC262C774A8B00754E5E /* EnterPasswordPresenterProtocol.swift */; };
+		01AEEC292C774A9B00754E5E /* EnterPasswordViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC282C774A9B00754E5E /* EnterPasswordViewProtocol.swift */; };
+		01AEEC2B2C774AA800754E5E /* EnterPasswordModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC2A2C774AA800754E5E /* EnterPasswordModelProtocol.swift */; };
+		01AEEC2D2C774AEC00754E5E /* EnterPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC2C2C774AEC00754E5E /* EnterPasswordModel.swift */; };
+		01AEEC312C774B0B00754E5E /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC302C774B0B00754E5E /* EnterPasswordViewController.swift */; };
+		01AEEC332C774B2F00754E5E /* EnterPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC322C774B2F00754E5E /* EnterPasswordPresenter.swift */; };
+		01AEEC352C774BCC00754E5E /* EnterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC342C774BCC00754E5E /* EnterPasswordView.swift */; };
 		01B7EA972C6F3D42006E048F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EA962C6F3D42006E048F /* AppDelegate.swift */; };
 		01B7EA992C6F3D42006E048F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EA982C6F3D42006E048F /* SceneDelegate.swift */; };
 		01B7EAA02C6F3D44006E048F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7EA9F2C6F3D44006E048F /* Assets.xcassets */; };
@@ -59,6 +66,13 @@
 		01AEEC1B2C77406A00754E5E /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		01AEEC1D2C7740AF00754E5E /* EnterEmailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailPresenter.swift; sourceTree = "<group>"; };
 		01AEEC1F2C77413400754E5E /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
+		01AEEC262C774A8B00754E5E /* EnterPasswordPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordPresenterProtocol.swift; sourceTree = "<group>"; };
+		01AEEC282C774A9B00754E5E /* EnterPasswordViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewProtocol.swift; sourceTree = "<group>"; };
+		01AEEC2A2C774AA800754E5E /* EnterPasswordModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordModelProtocol.swift; sourceTree = "<group>"; };
+		01AEEC2C2C774AEC00754E5E /* EnterPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordModel.swift; sourceTree = "<group>"; };
+		01AEEC302C774B0B00754E5E /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
+		01AEEC322C774B2F00754E5E /* EnterPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordPresenter.swift; sourceTree = "<group>"; };
+		01AEEC342C774BCC00754E5E /* EnterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordView.swift; sourceTree = "<group>"; };
 		01B7EA932C6F3D42006E048F /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7EA962C6F3D42006E048F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7EA982C6F3D42006E048F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +132,52 @@
 				01B7EB1A2C750694006E048F /* Presenter */,
 			);
 			path = EnterEmail;
+			sourceTree = "<group>";
+		};
+		01AEEC212C774A2600754E5E /* EnterPassword */ = {
+			isa = PBXGroup;
+			children = (
+				01AEEC252C774A5700754E5E /* Protocol */,
+				01AEEC242C774A5200754E5E /* Model */,
+				01AEEC232C774A4B00754E5E /* View */,
+				01AEEC222C774A4600754E5E /* Presenter */,
+			);
+			path = EnterPassword;
+			sourceTree = "<group>";
+		};
+		01AEEC222C774A4600754E5E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01AEEC322C774B2F00754E5E /* EnterPasswordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		01AEEC232C774A4B00754E5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01AEEC302C774B0B00754E5E /* EnterPasswordViewController.swift */,
+				01AEEC342C774BCC00754E5E /* EnterPasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01AEEC242C774A5200754E5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01AEEC2C2C774AEC00754E5E /* EnterPasswordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01AEEC252C774A5700754E5E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				01AEEC262C774A8B00754E5E /* EnterPasswordPresenterProtocol.swift */,
+				01AEEC282C774A9B00754E5E /* EnterPasswordViewProtocol.swift */,
+				01AEEC2A2C774AA800754E5E /* EnterPasswordModelProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		01B7EA8A2C6F3D42006E048F = {
@@ -383,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				01AEEC122C773FAA00754E5E /* EnterEmail */,
+				01AEEC212C774A2600754E5E /* EnterPassword */,
 			);
 			path = Registartion;
 			sourceTree = "<group>";
@@ -499,6 +560,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01AEEC332C774B2F00754E5E /* EnterPasswordPresenter.swift in Sources */,
+				01AEEC292C774A9B00754E5E /* EnterPasswordViewProtocol.swift in Sources */,
 				01B7EB0F2C73C3BC006E048F /* LoginViewController.swift in Sources */,
 				01B7EB132C73C64A006E048F /* LoginView.swift in Sources */,
 				01B7EAF62C738137006E048F /* UIColor+Extension.swift in Sources */,
@@ -513,15 +576,19 @@
 				01B7EB182C73CD83006E048F /* AppImage.swift in Sources */,
 				01B7EB162C73C918006E048F /* ViewBuilder.swift in Sources */,
 				01B7EAFD2C738CE7006E048F /* AuthView.swift in Sources */,
+				01AEEC352C774BCC00754E5E /* EnterPasswordView.swift in Sources */,
 				01B7EAD42C6F544B006E048F /* SplashPresenterProtocol.swift in Sources */,
 				01AEEC1E2C7740AF00754E5E /* EnterEmailPresenter.swift in Sources */,
 				01B7EB0B2C73C378006E048F /* LoginModelProtocol.swift in Sources */,
 				01B7EAC62C6F4CC7006E048F /* SplashPresenter.swift in Sources */,
+				01AEEC312C774B0B00754E5E /* EnterPasswordViewController.swift in Sources */,
 				01B7EAF82C738512006E048F /* AppColor.swift in Sources */,
 				01B7EB072C73C2A6006E048F /* LoginPresenterProtocol.swift in Sources */,
 				01AEEC1C2C77406A00754E5E /* EnterEmailViewController.swift in Sources */,
 				01B7EAE12C6F6D43006E048F /* AuthCoordinator.swift in Sources */,
 				01B7EABE2C6F4A2A006E048F /* SplashCoordinator.swift in Sources */,
+				01AEEC272C774A8B00754E5E /* EnterPasswordPresenterProtocol.swift in Sources */,
+				01AEEC2D2C774AEC00754E5E /* EnterPasswordModel.swift in Sources */,
 				01AEEC1A2C77404800754E5E /* EnterEmailModel.swift in Sources */,
 				01B7EAD22C6F5428006E048F /* SplashViewProtocol.swift in Sources */,
 				01B7EB112C73C3E5006E048F /* LoginPresenter.swift in Sources */,
@@ -532,6 +599,7 @@
 				01B7EABC2C6F4914006E048F /* CoordinatorFactory.swift in Sources */,
 				01AEEC162C773FF900754E5E /* EnterEmailViewProtocol.swift in Sources */,
 				01B7EB002C73BD6A006E048F /* AuthButton.swift in Sources */,
+				01AEEC2B2C774AA800754E5E /* EnterPasswordModelProtocol.swift in Sources */,
 				01B7EB0D2C73C388006E048F /* LoginModel.swift in Sources */,
 				01B7EAB52C6F4617006E048F /* CoordinatorProtocol.swift in Sources */,
 				01B7EA972C6F3D42006E048F /* AppDelegate.swift in Sources */,

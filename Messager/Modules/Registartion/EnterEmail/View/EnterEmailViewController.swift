@@ -24,7 +24,7 @@ final class EnterEmailViewController: UIViewController, EnterEmailViewProtocol {
     
     private func nextButtonTapped() {
         enterEmailView.nextButtonAction = { [weak self] email in
-            print(email)
+            self?.presenter.navigateToNextScreen()
         }
     }
     
