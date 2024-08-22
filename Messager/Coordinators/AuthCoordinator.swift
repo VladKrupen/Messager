@@ -29,7 +29,7 @@ final class AuthCoordinator: CoordinatorProtocol {
             case .loginButton:
                 self?.showLoginModule()
             case .registrationButton:
-                self?.showRegistrationModule()
+                self?.showEnterEmailModule()
             }
         }
     }
@@ -40,7 +40,9 @@ final class AuthCoordinator: CoordinatorProtocol {
         //completionHandler
     }
     
-    private func showRegistrationModule() {
-        
+    private func showEnterEmailModule() {
+        let controller = ModuleFactory().createEnterEmailModule()
+        navigationController.pushViewController(controller, animated: true)
+        //completionHandler
     }
 }

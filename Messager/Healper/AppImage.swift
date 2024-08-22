@@ -10,4 +10,5 @@ import Foundation
 struct AppImage {
     static let imageBackgroundAuthScreen: String = "auth"
     static let imageBackgroundLoginScreen: String = "login"
+    static let imageBackgroundRegistrationScreen: String = "registr"
 }

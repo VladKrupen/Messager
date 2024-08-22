@@ -18,7 +18,7 @@ final class LoginView: UIView {
     
     private lazy var titleLabel = viewBuilder.getTitleLabel(title: "Авторизация", view: self, scrollView: scrollView)
     
-    private lazy var emailField = viewBuilder.getTextField(placeholder: "Email", delegate: self, isSecureTextEntry: false)
+    private lazy var emailField = viewBuilder.getTextField(placeholder: "Email", delegate: self)
     
     private lazy var passwordField = viewBuilder.getTextField(placeholder: "Password", delegate: self, isSecureTextEntry: true, target: self, action: #selector(viewPasswordFieldLongPress))
     
@@ -44,7 +44,6 @@ final class LoginView: UIView {
     }
     
     //MARK: Setup keyboard
-
     private func setupHidingKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         addGestureRecognizer(tapGesture)
@@ -90,6 +89,7 @@ extension LoginView {
     @objc private func loginButtonTapped() {
         print(emailField.text)
         print(passwordField.text)
+        endEditing(true)
     }
     
     @objc private func viewPasswordFieldLongPress(_ gesture: UILongPressGestureRecognizer) {
@@ -108,10 +108,13 @@ extension LoginView {
 //MARK: UITextFieldDelegate
 extension LoginView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailField {
+        switch textField {
+        case emailField:
             passwordField.becomeFirstResponder()
-        } else {
+        case passwordField:
             textField.resignFirstResponder()
+        default:
+            return true
         }
         return true
     }

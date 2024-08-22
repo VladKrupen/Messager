@@ -31,4 +31,13 @@ final class ModuleFactory {
         model.presenter = presenter
         return view
     }
+    
+    func createEnterEmailModule() -> EnterEmailViewController {
+        let view = EnterEmailViewController()
+        let model = EnterEmailModel()
+        let presenter = EnterEmailPresenter(view: view, model: model)
+        view.presenter = presenter
+        model.presenter = presenter
+        return view
+    }
 }
