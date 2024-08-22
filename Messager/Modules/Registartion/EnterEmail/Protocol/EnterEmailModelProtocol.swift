@@ -8,5 +8,5 @@
 import Foundation
 
 protocol EnterEmailModelProtocol: AnyObject {
-    
+    func valideEmail(email: String) -> Bool
 }

@@ -9,5 +9,5 @@ import Foundation
 
 protocol EnterEmailPresenterProtocol: AnyObject {
     var completionHandler: (() -> Void)? { get set }
-    func navigateToNextScreen()
+    func validateEmailAndNavigate(email: String)
 }

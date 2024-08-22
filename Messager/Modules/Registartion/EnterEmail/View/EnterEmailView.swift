@@ -36,6 +36,11 @@ final class EnterEmailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: Configure view
+    func clearEmailField() {
+        emailField.text = ""
+    }
+    
     //MARK: Setup keyboard
     private func setupHidingKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))

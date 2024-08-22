@@ -9,6 +9,8 @@ import UIKit
 
 final class EnterPasswordView: UIView {
     
+    var nextButtonAction: (((String, String)) -> Void)?
+    
     private let viewBuilder = ViewBuilder()
     
     //MARK: UI
@@ -29,7 +31,7 @@ final class EnterPasswordView: UIView {
         return $0
     }(UIStackView())
     
-    private lazy var registerButton = viewBuilder.getAuthButton(title: "Зарегистрироваться", size: 24, color: .white, target: self, action: #selector(registerButtonTapped))
+    private lazy var nextButton = viewBuilder.getAuthButton(title: "Далее", size: 24, color: .white, target: self, action: #selector(nextButtonTapped))
     
     //MARK: Init
     override init(frame: CGRect) {
@@ -41,6 +43,12 @@ final class EnterPasswordView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: Configure
+    func clearTextFields() {
+        firstPasswordField.text = ""
+        secondPasswordField.text = ""
     }
     
     //MARK: Setup
@@ -62,7 +70,7 @@ final class EnterPasswordView: UIView {
         sendSubviewToBack(backgroundImageView)
         bringSubviewToFront(titleLabel)
         layoutVStack()
-        layoutRegisterButton()
+        layoutNextButton()
     }
     
     private func layoutVStack() {
@@ -77,13 +85,13 @@ final class EnterPasswordView: UIView {
         ])
     }
     
-    private func layoutRegisterButton() {
-        scrollView.addSubview(registerButton)
+    private func layoutNextButton() {
+        scrollView.addSubview(nextButton)
         
         NSLayoutConstraint.activate([
-            registerButton.topAnchor.constraint(equalTo: vStack.bottomAnchor, constant: 50),
-            registerButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 50)
+            nextButton.topAnchor.constraint(equalTo: vStack.bottomAnchor, constant: 50),
+            nextButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 50)
         ])
     }
     
@@ -94,7 +102,11 @@ final class EnterPasswordView: UIView {
 
 //MARK: OBJC
 extension EnterPasswordView {
-    @objc private func registerButtonTapped() {
+    @objc private func nextButtonTapped() {
+        guard let firstPassword = firstPasswordField.text, let secondPassword = secondPasswordField.text else {
+            return
+        }
+        nextButtonAction?((firstPassword, secondPassword))
         endEditing(true)
     }
     

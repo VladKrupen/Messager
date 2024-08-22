@@ -18,7 +18,15 @@ final class EnterEmailPresenter: EnterEmailPresenterProtocol {
         self.model = model
     }
     
-    func navigateToNextScreen() {
+    func validateEmailAndNavigate(email: String) {
+        guard model.valideEmail(email: email) else {
+            view?.showAlertIncorrectEmail()
+            return
+        }
+        navigateToNextScreen()
+    }
+    
+    private func navigateToNextScreen() {
         completionHandler?()
     }
     

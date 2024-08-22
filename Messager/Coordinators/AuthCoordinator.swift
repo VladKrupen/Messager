@@ -51,6 +51,8 @@ final class AuthCoordinator: CoordinatorProtocol {
     private func showEnterPasswordModule() {
         let controller = ModuleFactory().createEnterPasswordModule()
         navigationController.pushViewController(controller, animated: true)
-        //completionHandler
+        controller.presenter.completionHandler = { [weak self] in
+            
+        }
     }
 }

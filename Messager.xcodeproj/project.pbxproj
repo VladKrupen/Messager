@@ -21,6 +21,7 @@
 		01AEEC312C774B0B00754E5E /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC302C774B0B00754E5E /* EnterPasswordViewController.swift */; };
 		01AEEC332C774B2F00754E5E /* EnterPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC322C774B2F00754E5E /* EnterPasswordPresenter.swift */; };
 		01AEEC352C774BCC00754E5E /* EnterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC342C774BCC00754E5E /* EnterPasswordView.swift */; };
+		01AEEC372C77897100754E5E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AEEC362C77897100754E5E /* String+Extension.swift */; };
 		01B7EA972C6F3D42006E048F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EA962C6F3D42006E048F /* AppDelegate.swift */; };
 		01B7EA992C6F3D42006E048F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7EA982C6F3D42006E048F /* SceneDelegate.swift */; };
 		01B7EAA02C6F3D44006E048F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7EA9F2C6F3D44006E048F /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		01AEEC302C774B0B00754E5E /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
 		01AEEC322C774B2F00754E5E /* EnterPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordPresenter.swift; sourceTree = "<group>"; };
 		01AEEC342C774BCC00754E5E /* EnterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordView.swift; sourceTree = "<group>"; };
+		01AEEC362C77897100754E5E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		01B7EA932C6F3D42006E048F /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7EA962C6F3D42006E048F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7EA982C6F3D42006E048F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				01B7EAF52C738137006E048F /* UIColor+Extension.swift */,
+				01AEEC362C77897100754E5E /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				01B7EAEB2C71F99D006E048F /* AuthViewProtocol.swift in Sources */,
 				01B7EACD2C6F52AA006E048F /* AppCoordinatorProtocol.swift in Sources */,
 				01B7EADF2C6F6642006E048F /* FlowModuleProtocol.swift in Sources */,
+				01AEEC372C77897100754E5E /* String+Extension.swift in Sources */,
 				01B7EAE92C71F992006E048F /* AuthPresenterProtocol.swift in Sources */,
 				01B7EB182C73CD83006E048F /* AppImage.swift in Sources */,
 				01B7EB162C73C918006E048F /* ViewBuilder.swift in Sources */,

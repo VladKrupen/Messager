@@ -22,10 +22,25 @@ final class EnterEmailViewController: UIViewController, EnterEmailViewProtocol {
         nextButtonTapped()
     }
     
+    func showAlertIncorrectEmail() {
+        let alertController = UIAlertController(title: "Некорректный адрес", message: "Адрес электронной почты указан некорректно. Пожалуйста, проверьте введенные данные.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Хорошо", style: .default) { [weak self] _ in
+            self?.clearTextField()
+        }
+        alertController.addAction(okAction)
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alertController, animated: true)
+        }
+    }
+    
     private func nextButtonTapped() {
         enterEmailView.nextButtonAction = { [weak self] email in
-            self?.presenter.navigateToNextScreen()
+            self?.presenter.validateEmailAndNavigate(email: email)
         }
+    }
+    
+    private func clearTextField() {
+        enterEmailView.clearEmailField()
     }
     
     deinit {

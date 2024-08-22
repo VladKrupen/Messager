@@ -13,4 +13,8 @@ final class EnterEmailModel: EnterEmailModelProtocol {
     deinit {
         print("deinit EnterEmailModel")
     }
+    
+    func valideEmail(email: String) -> Bool {
+        return email.isValidEmail()
+    }
 }

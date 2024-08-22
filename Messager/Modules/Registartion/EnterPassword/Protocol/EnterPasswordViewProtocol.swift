@@ -8,5 +8,6 @@
 import Foundation
 
 protocol EnterPasswordViewProtocol: AnyObject {
-    
+    func showAlertIncorrectPassword()
+    func showAlertPasswordsDoNotMatch()
 }
