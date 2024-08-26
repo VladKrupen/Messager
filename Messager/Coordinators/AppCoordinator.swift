@@ -19,7 +19,8 @@ final class AppCoordinator: AppCoordinatorProtocol {
     }
     
     func start() {
-        showSplash()
+//        showSplash()
+        showAuth()
     }
     
     private func showSplash() {

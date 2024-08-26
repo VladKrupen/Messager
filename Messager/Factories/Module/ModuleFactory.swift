@@ -49,4 +49,13 @@ final class ModuleFactory {
         model.presenter = presenter
         return view
     }
+    
+    func createUserInfoModule() -> UserInfoViewController {
+        let view = UserInfoViewController()
+        let model = UserInfoModel()
+        let presenter = UserInfoPresenter(view: view, model: model)
+        view.presenter = presenter
+        model.presenter = presenter
+        return view
+    }
 }

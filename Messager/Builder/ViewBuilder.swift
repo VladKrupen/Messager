@@ -58,7 +58,7 @@ final class ViewBuilder {
             scrollView.addSubview(label)
             
             NSLayoutConstraint.activate([
-                label.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 50),
+                label.topAnchor.constraint(equalTo: scrollView.topAnchor),
                 label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                 label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             ])

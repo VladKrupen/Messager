@@ -18,7 +18,8 @@ final class AuthCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        showAuthModule()
+//        showAuthModule()
+        showUserInfoModule()
     }
     
     private func showAuthModule() {
@@ -52,7 +53,13 @@ final class AuthCoordinator: CoordinatorProtocol {
         let controller = ModuleFactory().createEnterPasswordModule()
         navigationController.pushViewController(controller, animated: true)
         controller.presenter.completionHandler = { [weak self] in
-            
+            self?.showUserInfoModule()
         }
+    }
+    
+    private func showUserInfoModule() {
+        let controller = ModuleFactory().createUserInfoModule()
+        navigationController.pushViewController(controller, animated: true)
+        //completionHandler
     }
 }

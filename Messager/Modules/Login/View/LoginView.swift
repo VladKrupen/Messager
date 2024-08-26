@@ -88,8 +88,6 @@ final class LoginView: UIView {
 //MARK: OBJC
 extension LoginView {
     @objc private func loginButtonTapped() {
-        print(emailField.text)
-        print(passwordField.text)
         endEditing(true)
     }
     
