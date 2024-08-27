@@ -27,7 +27,7 @@ final class UserInfoView: UIView {
         $0.layer.cornerRadius = 100
         $0.layer.borderWidth = 5
         $0.layer.borderColor = UIColor.white.cgColor
-        $0.contentMode = .scaleAspectFit
+        $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
         $0.image = UIImage(systemName: "person")
         $0.tintColor = .white
@@ -63,6 +63,10 @@ final class UserInfoView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateImage(image: UIImage) {
+        imageView.image = image
     }
     
     //MARK: Setup
