@@ -9,6 +9,8 @@ import Foundation
 
 final class UserInfoPresenter: UserInfoPresenterProtocol {
     
+    var completionHandler: (() -> Void)?
+    
     weak var view: UserInfoViewController?
     let model: UserInfoModelProtocol
     

@@ -18,8 +18,8 @@ final class AuthCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-//        showAuthModule()
-        showUserInfoModule()
+        showAuthModule()
+//        showUserInfoModule()
     }
     
     private func showAuthModule() {
@@ -60,6 +60,8 @@ final class AuthCoordinator: CoordinatorProtocol {
     private func showUserInfoModule() {
         let controller = ModuleFactory().createUserInfoModule()
         navigationController.pushViewController(controller, animated: true)
-        //completionHandler
+        controller.presenter.completionHandler = { [weak self] in
+            self?.flowCompletionHandler?()
+        }
     }
 }

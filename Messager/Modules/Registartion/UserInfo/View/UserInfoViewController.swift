@@ -26,7 +26,7 @@ final class UserInfoViewController: UIViewController, UserInfoViewProtocol {
 
     private func nextButtonTapped() {
         userInfoView.nextButtonAction = { [weak self] firstName, lastName in
-            
+            self?.presenter.completionHandler?()
         }
     }
     

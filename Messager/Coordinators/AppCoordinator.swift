@@ -20,7 +20,8 @@ final class AppCoordinator: AppCoordinatorProtocol {
     
     func start() {
 //        showSplash()
-        showAuth()
+//        showAuth()
+        showMainTabBar()
     }
     
     private func showSplash() {
@@ -37,7 +38,13 @@ final class AppCoordinator: AppCoordinatorProtocol {
         childCoordinator.append(authCoordinator)
         authCoordinator.start()
         authCoordinator.flowCompletionHandler = { [weak self] in
-            
+            self?.showMainTabBar()
         }
+    }
+    
+    private func showMainTabBar() {
+        let mainTabBarCoordinator = coordinatorFactory.createMainTabBarCoordinator(navigationController: navigationController)
+        childCoordinator.append(mainTabBarCoordinator)
+        mainTabBarCoordinator.start()
     }
 }

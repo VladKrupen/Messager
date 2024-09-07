@@ -23,4 +23,19 @@ final class CoordinatorFactory {
         let authCoordinator = AuthCoordinator(navigationController: navigationController)
         return authCoordinator
     }
+    
+    func createMainTabBarCoordinator(navigationController: UINavigationController) -> CoordinatorProtocol {
+        let mainTabBarCoordinator = MainTabBarCoordinator(navigationController: navigationController)
+        return mainTabBarCoordinator
+    }
+    
+    func createChatsCoordinator(navigationController: UINavigationController) -> CoordinatorProtocol {
+        let chatsCoordinator = ChatsCoordinator(navigationController: navigationController)
+        return chatsCoordinator
+    }
+    
+    func createSettingsCoordinator(navigationController: UINavigationController) -> CoordinatorProtocol {
+        let settingsCoordinator = SettingsCoordinator(navigationController: navigationController)
+        return settingsCoordinator
+    }
 }

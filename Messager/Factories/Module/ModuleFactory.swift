@@ -58,4 +58,18 @@ final class ModuleFactory {
         model.presenter = presenter
         return view
     }
+    
+    func createChatsModule() -> ChatsViewController {
+        let view = ChatsViewController()
+        let presenter = ChatsPresenter(view: view)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createSettingsModule() -> SettingsViewController {
+        let view = SettingsViewController()
+        let presenter = SettingsPresenter(view: view)
+        view.presenter = presenter
+        return view
+    }
 }

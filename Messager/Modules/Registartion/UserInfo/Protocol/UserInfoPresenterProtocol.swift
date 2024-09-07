@@ -8,5 +8,5 @@
 import Foundation
 
 protocol UserInfoPresenterProtocol: AnyObject {
-    
+    var completionHandler: (() -> Void)? { get set }
 }
